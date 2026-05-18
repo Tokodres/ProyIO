@@ -1,5 +1,4 @@
-import Modelo
-from Vista import Vista
+from Vista.Vista import Vista
 from tkinter import messagebox
 
 class Controlador:
@@ -16,11 +15,3 @@ class Controlador:
                 
             print(f"Controlador: Variables {variables} variables y {restricciones} restricciones.")
             ## se debe enviar nuevamente a vista y crear la matriz para añadir estos
-
-def main():
-    app = Controlador()
-    app.iniciar_app()
-    
-    
-if __name__ == "__main__":
-    main()
