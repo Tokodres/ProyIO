@@ -9,9 +9,9 @@ class Controlador:
         self.vista.mainloop()
         
     def Datos(self, variables, restricciones):
-            if (variables < 1 or restricciones < 1):
-                messagebox.showwarning("Atención", "Se requiere minimo una variable y 1 restriccion.")
-                return
-                
-            print(f"Controlador: Variables {variables} variables y {restricciones} restricciones.")
-            ## se debe enviar nuevamente a vista y crear la matriz para añadir estos
+        if variables < 1 or restricciones < 1:
+            messagebox.showwarning("Atención", "Se requiere mínimo una variable y 1 restricción.")
+            return
+        else:                
+            print(f"Controlador: Construyendo matriz de {variables + 1}x{restricciones + 1}")    
+            self.vista.generarMatriz(variables, restricciones)
